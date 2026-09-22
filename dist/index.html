@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#3157d5">
+  <meta name="description" content="Move Your Way helps every kid find movement that feels fun, comfortable, and completely their own.">
+  <meta property="og:title" content="Move Your Way — No tryouts. Just try it.">
+  <meta property="og:description" content="32 easy, fun ways to move—no scoreboard required.">
+  <meta property="og:image" content="og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Move Your Way — No tryouts. Just try it.">
+  <meta name="twitter:description" content="32 easy, fun ways to move—no scoreboard required.">
+  <meta name="twitter:image" content="og.png">
+  <title>Move Your Way — No tryouts. Just try it.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#moves">Skip to activities</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Move Your Way home">
+      <span class="brand-mark" aria-hidden="true">↗</span>
+      <span>MOVE<br>YOUR WAY</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#why">Why move?</a>
+      <a href="#moves">Find your move</a>
+    </nav>
+    <a class="header-cta" href="#moves">Let’s move <span aria-hidden="true">↓</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span aria-hidden="true">●</span> Movement for every kind of kid</p>
+        <h1 id="hero-title">No tryouts.<br><em>Just try it.</em></h1>
+        <p class="hero-dek">You don’t need a uniform, a team, or a “sporty” label. If it gets you moving and makes you smile, it counts.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#moves">Pick your move <span aria-hidden="true">↘</span></a>
+          <button class="button button-light" id="surprise-top" type="button">Surprise me <span aria-hidden="true">✦</span></button>
+        </div>
+        <p class="tiny-note"><span aria-hidden="true">☺</span> Zero pressure. Maximum fun.</p>
+      </div>
+      <div class="hero-art">
+        <img src="hero-move-your-way.png" alt="A joyful group of kids walking a dog, dancing, tossing a frisbee, biking, and stretching outdoors">
+        <div class="sticker sticker-one" aria-hidden="true">YOUR PACE</div>
+        <div class="sticker sticker-two" aria-hidden="true">COUNTS!</div>
+      </div>
+    </section>
+
+    <section class="marquee" aria-label="Campaign message">
+      <div>MOVE A LITTLE <span>✦</span> FEEL A LOT <span>✦</span> MOVE YOUR WAY <span>✦</span> MOVE A LITTLE <span>✦</span> FEEL A LOT <span>✦</span></div>
+    </section>
+
+    <section class="why" id="why" aria-labelledby="why-title">
+      <div>
+        <p class="section-kicker">HERE’S THE THING</p>
+        <h2 id="why-title">Athletic doesn’t have<br>just one <span>look.</span></h2>
+      </div>
+      <div class="why-copy">
+        <p>Moving isn’t about being the fastest or best. It can be a walk with your dog, dancing through one song, or taking the long way to class.</p>
+        <p class="highlight-line">Small moves are still real moves.</p>
+      </div>
+    </section>
+
+    <section class="moves" id="moves" aria-labelledby="moves-title">
+      <div class="moves-heading">
+        <div>
+          <p class="section-kicker">NO SCOREBOARD REQUIRED</p>
+          <h2 id="moves-title">Pick your own <span>move.</span></h2>
+          <p>Choose what feels good today. You can always pick something different tomorrow.</p>
+        </div>
+        <button class="button button-yellow" id="surprise" type="button">Pick for me <span aria-hidden="true">✦</span></button>
+      </div>
+
+      <div class="toolbar">
+        <label class="search-wrap">
+          <span class="sr-only">Search activities</span>
+          <span aria-hidden="true">⌕</span>
+          <input id="search" type="search" placeholder="Search moves..." autocomplete="off">
+        </label>
+        <div class="filters" role="group" aria-label="Filter activities">
+          <button class="filter active" data-filter="all" type="button">All</button>
+          <button class="filter" data-filter="easy" type="button">Super easy</button>
+          <button class="filter" data-filter="outside" type="button">Outside</button>
+          <button class="filter" data-filter="inside" type="button">Inside</button>
+          <button class="filter" data-filter="friends" type="button">With friends</button>
+        </div>
+      </div>
+
+      <p class="result-count" id="result-count" aria-live="polite"></p>
+      <div class="move-grid" id="move-grid"></div>
+      <div class="empty-state" id="empty-state" hidden>
+        <span aria-hidden="true">¯\_(ツ)_/¯</span>
+        <h3>No moves found—yet.</h3>
+        <p>Try a different word or show all activities.</p>
+        <button class="button button-dark" id="reset" type="button">Show all moves</button>
+      </div>
+    </section>
+
+    <section class="permission" aria-label="Encouragement">
+      <p class="section-kicker">YOUR OFFICIAL PERMISSION SLIP</p>
+      <p>Go slow. Be awkward.<br>Laugh a lot. <em>That counts.</em></p>
+      <a href="#moves">Find something that sounds fun <span aria-hidden="true">↑</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true">↗</span><span>MOVE<br>YOUR WAY</span></a>
+    <p>Movement belongs to everyone.</p>
+    <p class="footer-note">Made for fun, not first place. ✦</p>
+  </footer>
+
+  <dialog id="move-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close" type="button" aria-label="Close">×</button>
+    <div class="dialog-icon" id="dialog-icon" aria-hidden="true"></div>
+    <p class="section-kicker">YOUR MOVE IS...</p>
+    <h2 id="dialog-title"></h2>
+    <p id="dialog-description"></p>
+    <p class="dialog-nudge">Try it for just 5 minutes. You can stop whenever you want.</p>
+    <div class="dialog-actions">
+      <button class="button button-dark" id="done" type="button">I’ll try it</button>
+      <button class="button button-light" id="reroll" type="button">Pick another</button>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Nice pick. Have fun your way!</div>
+  <script src="script.js"></script>
+</body>
+</html>
