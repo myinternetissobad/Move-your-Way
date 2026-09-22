@@ -49,16 +49,20 @@ function render() {
     return matchesFilter && matchesSearch;
   });
 
-  grid.innerHTML = visibleActivities.map((activity, index) => `
+  grid.innerHTML = visibleActivities.map((activity, index) => {
+    const photoIndex = activities.indexOf(activity) % 16;
+    const x = (photoIndex % 4) * 33.333;
+    const y = Math.floor(photoIndex / 4) * 33.333;
+    return `
     <article class="move-card" style="animation-delay:${Math.min(index * 25, 250)}ms">
-      <div class="move-icon" aria-hidden="true">${activity.icon}</div>
+      <div class="move-photo" role="img" aria-label="${activity.name}" style="--x:${x}%;--y:${y}%"></div>
       <div class="move-body">
         <div class="move-meta"><span>${activity.tags.includes("inside") ? "Inside" : "Outside"}</span><b>${activity.effort}</b></div>
         <h3>${activity.name}</h3>
         <p>${activity.description}</p>
       </div>
     </article>
-  `).join("");
+  `}).join("");
 
   count.textContent = `${visibleActivities.length} ${visibleActivities.length === 1 ? "move" : "moves"} to try`;
   empty.hidden = visibleActivities.length > 0;
@@ -68,7 +72,11 @@ function render() {
 function chooseRandom() {
   const pool = visibleActivities.length ? visibleActivities : activities;
   const activity = pool[Math.floor(Math.random() * pool.length)];
-  document.querySelector("#dialog-icon").textContent = activity.icon;
+  const photoIndex = activities.indexOf(activity) % 16;
+  const photo = document.querySelector("#dialog-photo");
+  photo.style.setProperty("--x", `${(photoIndex % 4) * 33.333}%`);
+  photo.style.setProperty("--y", `${Math.floor(photoIndex / 4) * 33.333}%`);
+  photo.setAttribute("aria-label", activity.name);
   document.querySelector("#dialog-title").textContent = activity.name;
   document.querySelector("#dialog-description").textContent = activity.description;
   if (!dialog.open) dialog.showModal();
@@ -85,10 +93,6 @@ document.querySelectorAll(".filter").forEach(button => {
 
 search.addEventListener("input", render);
 document.querySelector("#surprise").addEventListener("click", chooseRandom);
-document.querySelector("#surprise-top").addEventListener("click", () => {
-  document.querySelector("#moves").scrollIntoView({ behavior: "smooth" });
-  setTimeout(chooseRandom, 450);
-});
 document.querySelector("#reroll").addEventListener("click", chooseRandom);
 document.querySelector(".dialog-close").addEventListener("click", () => dialog.close());
 document.querySelector("#done").addEventListener("click", () => {
