@@ -105,7 +105,10 @@ h1 em, h2 span { font-style: normal; color: var(--blue); }
 .move-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 20px; }
 .move-card { min-height: 310px; background: var(--paper); color: var(--ink); border: 2px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; opacity: 0; transform: translateY(12px); animation: cardIn .35s ease forwards; }
 @keyframes cardIn { to { opacity: 1; transform: none; } }
-.move-photo { min-height: 178px; border-bottom: 2px solid; background-image: url('activity-grid.png'); background-size: 400% 400%; background-position: var(--x) var(--y); background-repeat: no-repeat; transition: filter .2s ease, transform .2s ease; }
+.move-photo { min-height: 178px; border-bottom: 2px solid; background-size: 400% 400%; background-position: var(--x) var(--y); background-repeat: no-repeat; transition: filter .2s ease, transform .2s ease; }
+.photo-sheet-a { background-image: url('activity-grid.png'); }
+.photo-sheet-b { background-image: url('activity-grid-2.png'); }
+.photo-weekend { background-image: url('weekend-wander.png'); background-size: cover; background-position: center; }
 .move-card:hover .move-photo { filter: saturate(1.08); }
 .move-body { padding: 19px 20px 22px; }
 .move-meta { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 9px; }
@@ -128,7 +131,7 @@ footer > p { font-weight: 700; text-align: center; }
 dialog { width: min(520px, calc(100% - 34px)); border: 2px solid; border-radius: 24px; padding: 38px; box-shadow: 10px 10px 0 var(--ink); text-align: center; background: var(--paper); }
 dialog::backdrop { background: rgba(22, 19, 14, .72); backdrop-filter: blur(4px); }
 .dialog-close { position: absolute; right: 16px; top: 11px; border: 0; background: transparent; font-size: 34px; cursor: pointer; }
-.dialog-photo { width: 180px; height: 132px; background-image: url('activity-grid.png'); background-size: 400% 400%; background-position: var(--x) var(--y); border: 2px solid; border-radius: 16px; margin: 0 auto 22px; }
+.dialog-photo { width: 180px; height: 132px; background-size: 400% 400%; background-position: var(--x) var(--y); border: 2px solid; border-radius: 16px; margin: 0 auto 22px; }
 dialog h2 { font-size: 48px; }
 .dialog-nudge { background: #eee9df; border-radius: 12px; padding: 12px; font-size: 14px; }
 .dialog-actions { display: flex; justify-content: center; gap: 10px; margin-top: 22px; }

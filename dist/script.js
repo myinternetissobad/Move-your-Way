@@ -41,6 +41,23 @@ const dialog = document.querySelector("#move-dialog");
 let currentFilter = "all";
 let visibleActivities = activities;
 
+function getPhoto(index) {
+  if (index < 15) {
+    return { className: "photo-sheet-a", tile: index };
+  }
+  if (index < 31) {
+    return { className: "photo-sheet-b", tile: index - 15 };
+  }
+  return { className: "photo-weekend", tile: 0 };
+}
+
+function getPhotoPosition(tile) {
+  return {
+    x: (tile % 4) * 33.333,
+    y: Math.floor(tile / 4) * 33.333
+  };
+}
+
 function render() {
   const query = search.value.trim().toLowerCase();
   visibleActivities = activities.filter(activity => {
@@ -50,12 +67,11 @@ function render() {
   });
 
   grid.innerHTML = visibleActivities.map((activity, index) => {
-    const photoIndex = activities.indexOf(activity) % 16;
-    const x = (photoIndex % 4) * 33.333;
-    const y = Math.floor(photoIndex / 4) * 33.333;
+    const photo = getPhoto(activities.indexOf(activity));
+    const { x, y } = getPhotoPosition(photo.tile);
     return `
     <article class="move-card" style="animation-delay:${Math.min(index * 25, 250)}ms">
-      <div class="move-photo" role="img" aria-label="${activity.name}" style="--x:${x}%;--y:${y}%"></div>
+      <div class="move-photo ${photo.className}" role="img" aria-label="${activity.name}" style="--x:${x}%;--y:${y}%"></div>
       <div class="move-body">
         <div class="move-meta"><span>${activity.tags.includes("inside") ? "Inside" : "Outside"}</span><b>${activity.effort}</b></div>
         <h3>${activity.name}</h3>
@@ -72,10 +88,13 @@ function render() {
 function chooseRandom() {
   const pool = visibleActivities.length ? visibleActivities : activities;
   const activity = pool[Math.floor(Math.random() * pool.length)];
-  const photoIndex = activities.indexOf(activity) % 16;
+  const photoInfo = getPhoto(activities.indexOf(activity));
+  const position = getPhotoPosition(photoInfo.tile);
   const photo = document.querySelector("#dialog-photo");
-  photo.style.setProperty("--x", `${(photoIndex % 4) * 33.333}%`);
-  photo.style.setProperty("--y", `${Math.floor(photoIndex / 4) * 33.333}%`);
+  photo.classList.remove("photo-sheet-a", "photo-sheet-b", "photo-weekend");
+  photo.classList.add(photoInfo.className);
+  photo.style.setProperty("--x", `${position.x}%`);
+  photo.style.setProperty("--y", `${position.y}%`);
   photo.setAttribute("aria-label", activity.name);
   document.querySelector("#dialog-title").textContent = activity.name;
   document.querySelector("#dialog-description").textContent = activity.description;
