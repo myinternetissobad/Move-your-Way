@@ -1,37 +1,48 @@
 const activities = [
-  { name: "Walk a pet", description: "Let your furry friend pick the pace and explore the block together.", interests: ["animals", "nature", "friends"], interestLabel: "Animals", effort: "Easy" },
-  { name: "Walk to class", description: "Take the long hallway or an extra lap before the bell rings.", interests: ["friends", "calm"], interestLabel: "With friends", effort: "Everyday" },
-  { name: "Light jog", description: "Jog until you want to walk. Switching back and forth totally counts.", interests: ["nature", "calm"], interestLabel: "Nature", effort: "A little sweaty" },
-  { name: "One-song dance", description: "Put on one favorite track and move however the beat tells you.", interests: ["music", "creative"], interestLabel: "Music & dance", effort: "3–5 min" },
-  { name: "Bike cruise", description: "Roll around your neighborhood with no finish line in sight.", interests: ["wheels", "nature", "friends"], interestLabel: "Wheels", effort: "Your pace" },
-  { name: "Frisbee toss", description: "Grab a friend and see how many weird catches you can invent.", interests: ["games", "friends"], interestLabel: "Games", effort: "Playful" },
-  { name: "Cloud-spotting walk", description: "Wander outside and look for shapes in the sky as you go.", interests: ["nature", "calm"], interestLabel: "Nature", effort: "Chill" },
-  { name: "Living-room stretch", description: "Reach, twist, and loosen up while watching something you like.", interests: ["calm"], interestLabel: "Chill", effort: "Gentle" },
-  { name: "Shoot some hoops", description: "No game needed—just try a few shots from wherever feels good.", interests: ["games", "friends"], interestLabel: "Games", effort: "Your rules" },
-  { name: "Playground loop", description: "Climb, swing, balance, or make up a route around the playground.", interests: ["games", "friends"], interestLabel: "Games", effort: "Adventure" },
-  { name: "Stair challenge", description: "Take one extra flight at a comfortable pace, then celebrate it.", interests: ["games", "calm"], interestLabel: "Personal challenge", effort: "Quick" },
-  { name: "Kitchen disco", description: "Clear a tiny dance floor while you wait for a snack or meal.", interests: ["music", "friends"], interestLabel: "Music & dance", effort: "Silly" },
-  { name: "Nature photo walk", description: "Walk until you find five cool colors or textures to photograph.", interests: ["nature", "creative"], interestLabel: "Creative", effort: "Explore" },
-  { name: "Balloon volleyball", description: "Keep a balloon off the floor using any part of your body.", interests: ["games", "friends"], interestLabel: "Games", effort: "Low impact" },
-  { name: "Sidewalk chalk course", description: "Draw zigzags, hop spots, and spin zones, then follow the path.", interests: ["creative", "games", "friends"], interestLabel: "Creative", effort: "Make it yours" },
-  { name: "Room reset", description: "Put on music and speed-tidy. Bending and reaching are movement too.", interests: ["music", "calm"], interestLabel: "Music & dance", effort: "Useful" },
-  { name: "Mini yoga flow", description: "Try a few comfortable poses and breathe—no bendiness required.", interests: ["calm"], interestLabel: "Chill", effort: "Calm" },
-  { name: "Scooter roll", description: "Cruise a safe path and stop whenever your legs say so.", interests: ["wheels", "nature", "friends"], interestLabel: "Wheels", effort: "Breezy" },
-  { name: "Walk-and-talk", description: "Catch up with a friend while you loop the block or school grounds.", interests: ["friends", "nature", "calm"], interestLabel: "With friends", effort: "Social" },
-  { name: "Garden helper", description: "Water, weed, dig, or carry a few pots—nature is your gym.", interests: ["nature", "creative"], interestLabel: "Nature", effort: "Hands-on" },
-  { name: "Follow-the-leader", description: "Take turns inventing funny walks and easy moves for friends to copy.", interests: ["games", "friends", "creative"], interestLabel: "With friends", effort: "Goofy" },
-  { name: "Pillow obstacle course", description: "Use soft, safe objects to create a course you can step around.", interests: ["creative", "games"], interestLabel: "Creative", effort: "Inventive" },
-  { name: "Hopscotch", description: "Chalk it outside or use paper squares inside. Hop your own pattern.", interests: ["games", "friends"], interestLabel: "Games", effort: "Classic" },
-  { name: "Dog-toy fetch", description: "Toss, collect, repeat—and see who gets tired first, you or the dog.", interests: ["animals", "games"], interestLabel: "Animals", effort: "Playful" },
-  { name: "Skate and glide", description: "Find a smooth safe spot and roll slowly with a friend or playlist.", interests: ["wheels", "music", "friends"], interestLabel: "Wheels", effort: "Balance" },
-  { name: "Wall-ball bounce", description: "Bounce a soft ball against a wall and invent your own catch rules.", interests: ["games", "friends"], interestLabel: "Games", effort: "Make it up" },
-  { name: "Treasure hunt", description: "Hide clues around home or outside, then move from one to the next.", interests: ["creative", "games", "friends"], interestLabel: "Creative", effort: "Mission" },
-  { name: "Music-video copycat", description: "Try the easiest parts of a dance video. Pausing is always allowed.", interests: ["music", "creative", "friends"], interestLabel: "Music & dance", effort: "No pressure" },
-  { name: "Balance challenge", description: "Stand on one foot, walk a line, or balance a book on your head.", interests: ["calm", "games"], interestLabel: "Chill", effort: "1–5 min" },
-  { name: "Sunset stroll", description: "Take a slow walk and notice how the sky changes color.", interests: ["nature", "calm", "friends"], interestLabel: "Nature", effort: "Unwind" },
-  { name: "Laundry basket toss", description: "Roll up clean socks and aim for the basket from different spots.", interests: ["games", "friends"], interestLabel: "Games", effort: "Tiny game" },
-  { name: "Weekend wander", description: "Pick a safe direction and explore somewhere nearby you haven’t noticed.", interests: ["nature", "friends", "calm"], interestLabel: "Nature", effort: "Curious" }
+  { name: "Walk a pet", description: "Let your furry friend pick the pace and explore the block together.", category: "animals", effort: "Easy" },
+  { name: "Walk to class", description: "Take the long hallway or an extra lap before the bell rings.", category: "friends", effort: "Everyday" },
+  { name: "Light jog", description: "Jog until you want to walk. Switching back and forth totally counts.", category: "nature", effort: "A little sweaty" },
+  { name: "One-song dance", description: "Put on one favorite track and move however the beat tells you.", category: "music", effort: "3–5 min" },
+  { name: "Bike cruise", description: "Roll around your neighborhood with no finish line in sight.", category: "wheels", effort: "Your pace" },
+  { name: "Frisbee toss", description: "Grab a friend and see how many weird catches you can invent.", category: "games", effort: "Playful" },
+  { name: "Cloud-spotting walk", description: "Wander outside and look for shapes in the sky as you go.", category: "nature", effort: "Chill" },
+  { name: "Living-room stretch", description: "Reach, twist, and loosen up while watching something you like.", category: "calm", effort: "Gentle" },
+  { name: "Shoot some hoops", description: "No game needed—just try a few shots from wherever feels good.", category: "games", effort: "Your rules" },
+  { name: "Playground loop", description: "Climb, swing, balance, or make up a route around the playground.", category: "games", effort: "Adventure" },
+  { name: "Stair challenge", description: "Take one extra flight at a comfortable pace, then celebrate it.", category: "games", effort: "Quick" },
+  { name: "Kitchen disco", description: "Clear a tiny dance floor while you wait for a snack or meal.", category: "music", effort: "Silly" },
+  { name: "Nature photo walk", description: "Walk until you find five cool colors or textures to photograph.", category: "nature", effort: "Explore" },
+  { name: "Balloon volleyball", description: "Keep a balloon off the floor using any part of your body.", category: "games", effort: "Low impact" },
+  { name: "Sidewalk chalk course", description: "Draw zigzags, hop spots, and spin zones, then follow the path.", category: "creative", effort: "Make it yours" },
+  { name: "Room reset", description: "Put on music and speed-tidy. Bending and reaching are movement too.", category: "music", effort: "Useful" },
+  { name: "Mini yoga flow", description: "Try a few comfortable poses and breathe—no bendiness required.", category: "calm", effort: "Calm" },
+  { name: "Scooter roll", description: "Cruise a safe path and stop whenever your legs say so.", category: "wheels", effort: "Breezy" },
+  { name: "Walk-and-talk", description: "Catch up with a friend while you loop the block or school grounds.", category: "friends", effort: "Social" },
+  { name: "Garden helper", description: "Water, weed, dig, or carry a few pots—nature is your gym.", category: "nature", effort: "Hands-on" },
+  { name: "Follow-the-leader", description: "Take turns inventing funny walks and easy moves for friends to copy.", category: "friends", effort: "Goofy" },
+  { name: "Pillow obstacle course", description: "Use soft, safe objects to create a course you can step around.", category: "creative", effort: "Inventive" },
+  { name: "Hopscotch", description: "Chalk it outside or use paper squares inside. Hop your own pattern.", category: "games", effort: "Classic" },
+  { name: "Dog-toy fetch", description: "Toss, collect, repeat—and see who gets tired first, you or the dog.", category: "animals", effort: "Playful" },
+  { name: "Skate and glide", description: "Find a smooth safe spot and roll slowly with a friend or playlist.", category: "wheels", effort: "Balance" },
+  { name: "Wall-ball bounce", description: "Bounce a soft ball against a wall and invent your own catch rules.", category: "games", effort: "Make it up" },
+  { name: "Treasure hunt", description: "Hide clues around home or outside, then move from one to the next.", category: "creative", effort: "Mission" },
+  { name: "Music-video copycat", description: "Try the easiest parts of a dance video. Pausing is always allowed.", category: "music", effort: "No pressure" },
+  { name: "Balance challenge", description: "Stand on one foot, walk a line, or balance a book on your head.", category: "calm", effort: "1–5 min" },
+  { name: "Sunset stroll", description: "Take a slow walk and notice how the sky changes color.", category: "nature", effort: "Unwind" },
+  { name: "Laundry basket toss", description: "Roll up clean socks and aim for the basket from different spots.", category: "games", effort: "Tiny game" },
+  { name: "Weekend wander", description: "Pick a safe direction and explore somewhere nearby you haven’t noticed.", category: "nature", effort: "Curious" }
 ];
+
+const categoryNames = {
+  music: "Music & dance",
+  animals: "Animals",
+  nature: "Nature",
+  creative: "Creative",
+  games: "Games",
+  wheels: "Wheels",
+  calm: "Chill",
+  friends: "With friends"
+};
 
 const grid = document.querySelector("#move-grid");
 const search = document.querySelector("#search");
@@ -61,8 +72,8 @@ function getPhotoPosition(tile) {
 function render() {
   const query = search.value.trim().toLowerCase();
   visibleActivities = activities.filter(activity => {
-    const matchesFilter = currentFilter === "all" || activity.interests.includes(currentFilter);
-    const matchesSearch = `${activity.name} ${activity.description} ${activity.effort} ${activity.interestLabel} ${activity.interests.join(" ")}`.toLowerCase().includes(query);
+    const matchesFilter = currentFilter === "all" || activity.category === currentFilter;
+    const matchesSearch = `${activity.name} ${activity.description} ${activity.effort} ${categoryNames[activity.category]}`.toLowerCase().includes(query);
     return matchesFilter && matchesSearch;
   });
 
@@ -70,24 +81,23 @@ function render() {
     const photo = getPhoto(activities.indexOf(activity));
     const { x, y } = getPhotoPosition(photo.tile);
     return `
-    <article class="move-card" style="animation-delay:${Math.min(index * 25, 250)}ms">
-      <div class="move-photo ${photo.className}" role="img" aria-label="${activity.name}" style="--x:${x}%;--y:${y}%"></div>
-      <div class="move-body">
-        <div class="move-meta"><span>${activity.interestLabel}</span><b>${activity.effort}</b></div>
-        <h3>${activity.name}</h3>
-        <p>${activity.description}</p>
-      </div>
-    </article>
+    <button class="move-card" type="button" data-activity-index="${activities.indexOf(activity)}" aria-label="Choose ${activity.name}" style="animation-delay:${Math.min(index * 25, 250)}ms">
+      <span class="move-photo ${photo.className}" aria-hidden="true" style="--x:${x}%;--y:${y}%"></span>
+      <span class="move-body">
+        <span class="move-meta"><span>${categoryNames[activity.category]}</span><b>${activity.effort}</b></span>
+        <span class="move-title">${activity.name}</span>
+        <span class="move-description">${activity.description}</span>
+      </span>
+    </button>
   `}).join("");
 
   count.textContent = `${visibleActivities.length} ${visibleActivities.length === 1 ? "move" : "moves"} to try`;
   empty.hidden = visibleActivities.length > 0;
   grid.hidden = visibleActivities.length === 0;
+  document.querySelector("#surprise").disabled = visibleActivities.length === 0;
 }
 
-function chooseRandom() {
-  const pool = visibleActivities.length ? visibleActivities : activities;
-  const activity = pool[Math.floor(Math.random() * pool.length)];
+function openActivity(activity) {
   const photoInfo = getPhoto(activities.indexOf(activity));
   const position = getPhotoPosition(photoInfo.tile);
   const photo = document.querySelector("#dialog-photo");
@@ -100,6 +110,17 @@ function chooseRandom() {
   document.querySelector("#dialog-description").textContent = activity.description;
   if (!dialog.open) dialog.showModal();
 }
+
+function chooseRandom() {
+  if (!visibleActivities.length) return;
+  openActivity(visibleActivities[Math.floor(Math.random() * visibleActivities.length)]);
+}
+
+grid.addEventListener("click", event => {
+  const card = event.target.closest(".move-card");
+  if (!card) return;
+  openActivity(activities[Number(card.dataset.activityIndex)]);
+});
 
 document.querySelectorAll(".filter").forEach(button => {
   button.addEventListener("click", () => {
