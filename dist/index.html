@@ -69,7 +69,7 @@
       <h2 id="how-title">Find something that feels like <span>you.</span></h2>
       <ol>
         <li><b>1</b><div><strong>Scroll through the activities</strong><span>Look at the photos and notice what seems fun.</span></div></li>
-        <li><b>2</b><div><strong>Use a filter if you want</strong><span>Choose easy, inside, outside, or with friends.</span></div></li>
+        <li><b>2</b><div><strong>Choose what you’re into</strong><span>Filter by music, animals, nature, games, and more.</span></div></li>
         <li><b>3</b><div><strong>Try one for five minutes</strong><span>Go at your pace. Stopping or switching is always okay.</span></div></li>
       </ol>
       <a class="text-link" href="#moves">See all activities <span aria-hidden="true">↓</span></a>
@@ -91,12 +91,23 @@
           <span aria-hidden="true">⌕</span>
           <input id="search" type="search" placeholder="Search moves..." autocomplete="off">
         </label>
-        <div class="filters" role="group" aria-label="Filter activities">
-          <button class="filter active" data-filter="all" type="button">All</button>
-          <button class="filter" data-filter="easy" type="button">Super easy</button>
-          <button class="filter" data-filter="outside" type="button">Outside</button>
-          <button class="filter" data-filter="inside" type="button">Inside</button>
-          <button class="filter" data-filter="friends" type="button">With friends</button>
+        <div class="interest-panel">
+          <div class="interest-heading">
+            <p class="section-kicker">FILTER BY INTEREST</p>
+            <h3>What are you into?</h3>
+            <p>Pick a hobby or vibe. We’ll show you activities that match.</p>
+          </div>
+          <div class="filters" role="group" aria-label="Filter activities by interest">
+            <button class="filter active" data-filter="all" type="button" aria-pressed="true">All interests</button>
+            <button class="filter" data-filter="music" type="button" aria-pressed="false">Music &amp; dance</button>
+            <button class="filter" data-filter="animals" type="button" aria-pressed="false">Animals</button>
+            <button class="filter" data-filter="nature" type="button" aria-pressed="false">Nature</button>
+            <button class="filter" data-filter="creative" type="button" aria-pressed="false">Creative</button>
+            <button class="filter" data-filter="games" type="button" aria-pressed="false">Games</button>
+            <button class="filter" data-filter="wheels" type="button" aria-pressed="false">Wheels</button>
+            <button class="filter" data-filter="calm" type="button" aria-pressed="false">Chill</button>
+            <button class="filter" data-filter="friends" type="button" aria-pressed="false">With friends</button>
+          </div>
         </div>
       </div>
 

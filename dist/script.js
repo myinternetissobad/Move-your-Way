@@ -1,36 +1,36 @@
 const activities = [
-  { name: "Walk a pet", icon: "🐕", description: "Let your furry friend pick the pace and explore the block together.", tags: ["easy", "outside"], effort: "Easy" },
-  { name: "Walk to class", icon: "🎒", description: "Take the long hallway or an extra lap before the bell rings.", tags: ["easy", "inside", "friends"], effort: "Everyday" },
-  { name: "Light jog", icon: "👟", description: "Jog until you want to walk. Switching back and forth totally counts.", tags: ["outside"], effort: "A little sweaty" },
-  { name: "One-song dance", icon: "🎧", description: "Put on one favorite track and move however the beat tells you.", tags: ["easy", "inside"], effort: "3–5 min" },
-  { name: "Bike cruise", icon: "🚲", description: "Roll around your neighborhood with no finish line in sight.", tags: ["outside", "friends"], effort: "Your pace" },
-  { name: "Frisbee toss", icon: "🥏", description: "Grab a friend and see how many weird catches you can invent.", tags: ["outside", "friends"], effort: "Playful" },
-  { name: "Cloud-spotting walk", icon: "☁️", description: "Wander outside and look for shapes in the sky as you go.", tags: ["easy", "outside"], effort: "Chill" },
-  { name: "Living-room stretch", icon: "🙆", description: "Reach, twist, and loosen up while watching something you like.", tags: ["easy", "inside"], effort: "Gentle" },
-  { name: "Shoot some hoops", icon: "🏀", description: "No game needed—just try a few shots from wherever feels good.", tags: ["outside", "friends"], effort: "Your rules" },
-  { name: "Playground loop", icon: "🛝", description: "Climb, swing, balance, or make up a route around the playground.", tags: ["outside", "friends"], effort: "Adventure" },
-  { name: "Stair challenge", icon: "🪜", description: "Take one extra flight at a comfortable pace, then celebrate it.", tags: ["inside"], effort: "Quick" },
-  { name: "Kitchen disco", icon: "🪩", description: "Clear a tiny dance floor while you wait for a snack or meal.", tags: ["easy", "inside", "friends"], effort: "Silly" },
-  { name: "Nature photo walk", icon: "📷", description: "Walk until you find five cool colors or textures to photograph.", tags: ["easy", "outside", "friends"], effort: "Explore" },
-  { name: "Balloon volleyball", icon: "🎈", description: "Keep a balloon off the floor using any part of your body.", tags: ["easy", "inside", "friends"], effort: "Low impact" },
-  { name: "Sidewalk chalk course", icon: "🖍️", description: "Draw zigzags, hop spots, and spin zones, then follow the path.", tags: ["outside", "friends"], effort: "Creative" },
-  { name: "Room reset", icon: "🧹", description: "Put on music and speed-tidy. Bending and reaching are movement too.", tags: ["easy", "inside"], effort: "Useful" },
-  { name: "Mini yoga flow", icon: "🧘", description: "Try a few comfortable poses and breathe—no bendiness required.", tags: ["easy", "inside"], effort: "Calm" },
-  { name: "Scooter roll", icon: "🛴", description: "Cruise a safe path and stop whenever your legs say so.", tags: ["outside", "friends"], effort: "Breezy" },
-  { name: "Walk-and-talk", icon: "💬", description: "Catch up with a friend while you loop the block or school grounds.", tags: ["easy", "outside", "friends"], effort: "Social" },
-  { name: "Garden helper", icon: "🌱", description: "Water, weed, dig, or carry a few pots—nature is your gym.", tags: ["easy", "outside"], effort: "Hands-on" },
-  { name: "Follow-the-leader", icon: "🦆", description: "Take turns inventing funny walks and easy moves for friends to copy.", tags: ["inside", "outside", "friends"], effort: "Goofy" },
-  { name: "Pillow obstacle course", icon: "🛋️", description: "Use soft, safe objects to create a course you can step around.", tags: ["inside", "friends"], effort: "Inventive" },
-  { name: "Hopscotch", icon: "🔢", description: "Chalk it outside or use paper squares inside. Hop your own pattern.", tags: ["outside", "inside", "friends"], effort: "Classic" },
-  { name: "Dog-toy fetch", icon: "🎾", description: "Toss, collect, repeat—and see who gets tired first, you or the dog.", tags: ["outside", "inside"], effort: "Playful" },
-  { name: "Skate and glide", icon: "🛼", description: "Find a smooth safe spot and roll slowly with a friend or playlist.", tags: ["outside", "friends"], effort: "Balance" },
-  { name: "Wall-ball bounce", icon: "🔴", description: "Bounce a soft ball against a wall and invent your own catch rules.", tags: ["outside", "friends"], effort: "Make it up" },
-  { name: "Treasure hunt", icon: "🗺️", description: "Hide clues around home or outside, then move from one to the next.", tags: ["inside", "outside", "friends"], effort: "Mission" },
-  { name: "Music-video copycat", icon: "📺", description: "Try the easiest parts of a dance video. Pausing is always allowed.", tags: ["inside", "friends"], effort: "No pressure" },
-  { name: "Balance challenge", icon: "⚖️", description: "Stand on one foot, walk a line, or balance a book on your head.", tags: ["easy", "inside"], effort: "1–5 min" },
-  { name: "Sunset stroll", icon: "🌅", description: "Take a slow walk and notice how the sky changes color.", tags: ["easy", "outside", "friends"], effort: "Unwind" },
-  { name: "Laundry basket toss", icon: "🧺", description: "Roll up clean socks and aim for the basket from different spots.", tags: ["easy", "inside", "friends"], effort: "Tiny game" },
-  { name: "Weekend wander", icon: "🧭", description: "Pick a safe direction and explore somewhere nearby you haven’t noticed.", tags: ["outside", "friends"], effort: "Curious" }
+  { name: "Walk a pet", description: "Let your furry friend pick the pace and explore the block together.", interests: ["animals", "nature", "friends"], interestLabel: "Animals", effort: "Easy" },
+  { name: "Walk to class", description: "Take the long hallway or an extra lap before the bell rings.", interests: ["friends", "calm"], interestLabel: "With friends", effort: "Everyday" },
+  { name: "Light jog", description: "Jog until you want to walk. Switching back and forth totally counts.", interests: ["nature", "calm"], interestLabel: "Nature", effort: "A little sweaty" },
+  { name: "One-song dance", description: "Put on one favorite track and move however the beat tells you.", interests: ["music", "creative"], interestLabel: "Music & dance", effort: "3–5 min" },
+  { name: "Bike cruise", description: "Roll around your neighborhood with no finish line in sight.", interests: ["wheels", "nature", "friends"], interestLabel: "Wheels", effort: "Your pace" },
+  { name: "Frisbee toss", description: "Grab a friend and see how many weird catches you can invent.", interests: ["games", "friends"], interestLabel: "Games", effort: "Playful" },
+  { name: "Cloud-spotting walk", description: "Wander outside and look for shapes in the sky as you go.", interests: ["nature", "calm"], interestLabel: "Nature", effort: "Chill" },
+  { name: "Living-room stretch", description: "Reach, twist, and loosen up while watching something you like.", interests: ["calm"], interestLabel: "Chill", effort: "Gentle" },
+  { name: "Shoot some hoops", description: "No game needed—just try a few shots from wherever feels good.", interests: ["games", "friends"], interestLabel: "Games", effort: "Your rules" },
+  { name: "Playground loop", description: "Climb, swing, balance, or make up a route around the playground.", interests: ["games", "friends"], interestLabel: "Games", effort: "Adventure" },
+  { name: "Stair challenge", description: "Take one extra flight at a comfortable pace, then celebrate it.", interests: ["games", "calm"], interestLabel: "Personal challenge", effort: "Quick" },
+  { name: "Kitchen disco", description: "Clear a tiny dance floor while you wait for a snack or meal.", interests: ["music", "friends"], interestLabel: "Music & dance", effort: "Silly" },
+  { name: "Nature photo walk", description: "Walk until you find five cool colors or textures to photograph.", interests: ["nature", "creative"], interestLabel: "Creative", effort: "Explore" },
+  { name: "Balloon volleyball", description: "Keep a balloon off the floor using any part of your body.", interests: ["games", "friends"], interestLabel: "Games", effort: "Low impact" },
+  { name: "Sidewalk chalk course", description: "Draw zigzags, hop spots, and spin zones, then follow the path.", interests: ["creative", "games", "friends"], interestLabel: "Creative", effort: "Make it yours" },
+  { name: "Room reset", description: "Put on music and speed-tidy. Bending and reaching are movement too.", interests: ["music", "calm"], interestLabel: "Music & dance", effort: "Useful" },
+  { name: "Mini yoga flow", description: "Try a few comfortable poses and breathe—no bendiness required.", interests: ["calm"], interestLabel: "Chill", effort: "Calm" },
+  { name: "Scooter roll", description: "Cruise a safe path and stop whenever your legs say so.", interests: ["wheels", "nature", "friends"], interestLabel: "Wheels", effort: "Breezy" },
+  { name: "Walk-and-talk", description: "Catch up with a friend while you loop the block or school grounds.", interests: ["friends", "nature", "calm"], interestLabel: "With friends", effort: "Social" },
+  { name: "Garden helper", description: "Water, weed, dig, or carry a few pots—nature is your gym.", interests: ["nature", "creative"], interestLabel: "Nature", effort: "Hands-on" },
+  { name: "Follow-the-leader", description: "Take turns inventing funny walks and easy moves for friends to copy.", interests: ["games", "friends", "creative"], interestLabel: "With friends", effort: "Goofy" },
+  { name: "Pillow obstacle course", description: "Use soft, safe objects to create a course you can step around.", interests: ["creative", "games"], interestLabel: "Creative", effort: "Inventive" },
+  { name: "Hopscotch", description: "Chalk it outside or use paper squares inside. Hop your own pattern.", interests: ["games", "friends"], interestLabel: "Games", effort: "Classic" },
+  { name: "Dog-toy fetch", description: "Toss, collect, repeat—and see who gets tired first, you or the dog.", interests: ["animals", "games"], interestLabel: "Animals", effort: "Playful" },
+  { name: "Skate and glide", description: "Find a smooth safe spot and roll slowly with a friend or playlist.", interests: ["wheels", "music", "friends"], interestLabel: "Wheels", effort: "Balance" },
+  { name: "Wall-ball bounce", description: "Bounce a soft ball against a wall and invent your own catch rules.", interests: ["games", "friends"], interestLabel: "Games", effort: "Make it up" },
+  { name: "Treasure hunt", description: "Hide clues around home or outside, then move from one to the next.", interests: ["creative", "games", "friends"], interestLabel: "Creative", effort: "Mission" },
+  { name: "Music-video copycat", description: "Try the easiest parts of a dance video. Pausing is always allowed.", interests: ["music", "creative", "friends"], interestLabel: "Music & dance", effort: "No pressure" },
+  { name: "Balance challenge", description: "Stand on one foot, walk a line, or balance a book on your head.", interests: ["calm", "games"], interestLabel: "Chill", effort: "1–5 min" },
+  { name: "Sunset stroll", description: "Take a slow walk and notice how the sky changes color.", interests: ["nature", "calm", "friends"], interestLabel: "Nature", effort: "Unwind" },
+  { name: "Laundry basket toss", description: "Roll up clean socks and aim for the basket from different spots.", interests: ["games", "friends"], interestLabel: "Games", effort: "Tiny game" },
+  { name: "Weekend wander", description: "Pick a safe direction and explore somewhere nearby you haven’t noticed.", interests: ["nature", "friends", "calm"], interestLabel: "Nature", effort: "Curious" }
 ];
 
 const grid = document.querySelector("#move-grid");
@@ -61,8 +61,8 @@ function getPhotoPosition(tile) {
 function render() {
   const query = search.value.trim().toLowerCase();
   visibleActivities = activities.filter(activity => {
-    const matchesFilter = currentFilter === "all" || activity.tags.includes(currentFilter);
-    const matchesSearch = `${activity.name} ${activity.description} ${activity.effort}`.toLowerCase().includes(query);
+    const matchesFilter = currentFilter === "all" || activity.interests.includes(currentFilter);
+    const matchesSearch = `${activity.name} ${activity.description} ${activity.effort} ${activity.interestLabel} ${activity.interests.join(" ")}`.toLowerCase().includes(query);
     return matchesFilter && matchesSearch;
   });
 
@@ -73,7 +73,7 @@ function render() {
     <article class="move-card" style="animation-delay:${Math.min(index * 25, 250)}ms">
       <div class="move-photo ${photo.className}" role="img" aria-label="${activity.name}" style="--x:${x}%;--y:${y}%"></div>
       <div class="move-body">
-        <div class="move-meta"><span>${activity.tags.includes("inside") ? "Inside" : "Outside"}</span><b>${activity.effort}</b></div>
+        <div class="move-meta"><span>${activity.interestLabel}</span><b>${activity.effort}</b></div>
         <h3>${activity.name}</h3>
         <p>${activity.description}</p>
       </div>
@@ -104,7 +104,9 @@ function chooseRandom() {
 document.querySelectorAll(".filter").forEach(button => {
   button.addEventListener("click", () => {
     document.querySelector(".filter.active")?.classList.remove("active");
+    document.querySelectorAll(".filter").forEach(filter => filter.setAttribute("aria-pressed", "false"));
     button.classList.add("active");
+    button.setAttribute("aria-pressed", "true");
     currentFilter = button.dataset.filter;
     render();
   });
@@ -124,7 +126,9 @@ document.querySelector("#reset").addEventListener("click", () => {
   search.value = "";
   currentFilter = "all";
   document.querySelector(".filter.active")?.classList.remove("active");
+  document.querySelectorAll(".filter").forEach(filter => filter.setAttribute("aria-pressed", "false"));
   document.querySelector('[data-filter="all"]').classList.add("active");
+  document.querySelector('[data-filter="all"]').setAttribute("aria-pressed", "true");
   render();
 });
 dialog.addEventListener("click", event => {
